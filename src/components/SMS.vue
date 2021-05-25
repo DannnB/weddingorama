@@ -1,6 +1,6 @@
 <template>
     <section class="sms">
-        <h3>Sign up for text alearts</h3>
+        <h3>Sign up for text alerts</h3>
         <p>This will help us keep you updated on any issues or changes. Including COVID-19 infomation.</p>
         <form>
             <input placeholder="Mobile number...">
