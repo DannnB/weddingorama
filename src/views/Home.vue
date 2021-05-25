@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <Header />
-    <SMS />
-    <RSVP />
+    <!-- <SMS /> -->
+    <!-- <RSVP /> -->
     <Location />
     <Schedule />
     <Gifts />
