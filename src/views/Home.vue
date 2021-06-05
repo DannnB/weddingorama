@@ -1,13 +1,15 @@
 <template>
   <div class="home">
-    <Header />
+    <h1>Online RSPVs and wedding infomation is open from Monday the 7th of June 2021</h1>
+    <h2>Please come back on or after this date to fill in the RSPV form.</h2>
+    <!-- <Header /> -->
     <!-- <SMS /> -->
     <!-- <RSVP /> -->
-    <Location />
-    <Schedule />
-    <Gifts />
-    <Party />
-    <QnA />
+    <!-- <Location /> -->
+    <!-- <Schedule /> -->
+    <!-- <Gifts /> -->
+    <!-- <Party /> -->
+    <!-- <QnA /> -->
   </div>
 </template>
 
@@ -39,7 +41,7 @@ export default {
 
 <style lang="scss">
 body {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 section {
