@@ -14,8 +14,18 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #454545;
+  font-size: 16px
 }
 
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 2rem;
+}
 h1, h2, h3, h4, p {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
