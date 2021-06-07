@@ -1,110 +1,49 @@
 <template>
     <section class="rsvp">
-        <h2>RSVP</h2>
-        <p>Ceremony &amp; Reception guests only</p>
-        <label>You code
-            <input type="text" />
-        </label>
-        <br>
-        <label>Name
-            <input type="text" />
-        </label>
-        <br>
-        <label>Number attending
-            <input type="text" />
-        </label>
-        <br>
-        <label>
-            <input type="radio" name="attending"/>
-            Attending
-        </label>
-        <br>
-        <label>
-            <input type="radio" name="attending"/>
-            Not Attending
-        </label>
-
-        <form>
-            <div class="person">
-                <h3>Guest 1</h3>
-                <label>Name
+        <h2>Online RSPV</h2>
+        <p>Please go through the steps below to send us your RSVP details</p>
+        <div class="form-steps">
+            <div class="step-1">
+                <h3 class="title is-3">Step One - Where are you invited for?</h3>
+                <button>Ceremony</button>
+                <button>Evening</button>
+            </div>
+            <div class="step-2">
+                <h3 class="title is-3">Step Two - Accept or Decline</h3>
+                <label>
+                    <input type="checkbox" name="accept-decline"/>
+                    Accepts with pleasure
+                </label>
+                <label>
+                    <input type="checkbox" name="accept-decline"/>
+                    Declines with regrets
+                </label>
+            </div>
+            <div class="step-3">
+                <h3 class="title is-3">Step Three - Guest Names and Song Request</h3>
+                <h4 class="title is-4">Guest Names</h4>
+                <label>
+                    <span>1</span>
                     <input type="text"/>
                 </label>
-                
-                <div class="menu">
-                    <h4>Starter</h4>
-                    <label>
-                        <input type="radio" name="starter"/>
-                        Option one
-                    </label>
-                    <label>
-                        <input type="radio" name="starter"/>
-                        Option two
-                    </label>
-
-                    <h4>Main</h4>
-                    <label>
-                        <input type="radio" name="main"/>
-                        Option one
-                    </label>
-                    <label>
-                        <input type="radio" name="main"/>
-                        Option two
-                    </label>
-
-                    <h4>Dessert</h4>
-                    <label>
-                        <input type="radio" name="dessert"/>
-                        Option one
-                    </label>
-                    <label>
-                        <input type="radio" name="dessert"/>
-                        Option two
-                    </label>
-                </div>
-            </div>
-            <button>Add another guest?</button>
-            
-            <div class="person">
-                <h3>Guest 2</h3>
-                <label>Name
+                <label>
+                    <span>2</span>
                     <input type="text"/>
                 </label>
-                
-                <div class="menu">
-                    <h4>Starter</h4>
-                    <label>
-                        <input type="radio" name="starter"/>
-                        Soup of the day
-                    </label>
-                    <label>
-                        <input type="radio" name="starter"/>
-                        Option two
-                    </label>
-
-                    <h4>Main</h4>
-                    <label>
-                        <input type="radio" name="main"/>
-                        Option one
-                    </label>
-                    <label>
-                        <input type="radio" name="main"/>
-                        Option two
-                    </label>
-
-                    <h4>Dessert</h4>
-                    <label>
-                        <input type="radio" name="dessert"/>
-                        Option one
-                    </label>
-                    <label>
-                        <input type="radio" name="dessert"/>
-                        Option two
-                    </label>
-                </div>
+                <label>
+                    <span>3</span>
+                    <input type="text"/>
+                </label>
+                <label>
+                    <span>4</span>
+                    <input type="text"/>
+                </label>
+                <label>
+                    Song Request
+                    <input type="text"/>
+                </label>
             </div>
-            
-        </form>
+        </div>
     </section>
 </template>
 
@@ -119,5 +58,24 @@ export default {
         margin: 10px 0;
         padding: 20px;
         background: rgb(230, 230, 230);
+    }
+    label {
+        display: block;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        span {
+            display: inline-block;
+            position: relative;
+            top: -11px;
+            width: 40px;
+            height: 45px;
+            color: #ffffff;
+            background: #6A4964;
+        }
+        input {
+            height: 40px;
+            border: 1px solid #6A4964;
+        }
     }
 </style>

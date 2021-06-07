@@ -4,7 +4,7 @@
     <h2>Please come back on or after this date to fill in the RSPV form.</h2>
     <!-- <Header /> -->
     <!-- <SMS /> -->
-    <!-- <RSVP /> -->
+    <RSVP />
     <!-- <Location /> -->
     <!-- <Schedule /> -->
     <!-- <Gifts /> -->
