@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <h1>Online RSPVs and wedding infomation is open from Monday the 7th of June 2021</h1>
-    <h2>Please come back on or after this date to fill in the RSPV form.</h2>
+    <h1>Annise & Daniel's Wedding!</h1>
+    <!-- <h2>Please come back on or after this date to fill in the RSPV form.</h2> -->
     <!-- <Header /> -->
     <!-- <SMS /> -->
     <RSVP />

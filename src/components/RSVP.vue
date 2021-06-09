@@ -1,7 +1,8 @@
 <template>
     <section class="rsvp">
         <h2>Online RSPV</h2>
-        <p>Please go through the steps below to send us your RSVP details</p>
+        <p>More infomation will coming soon, including a gift list and schedule!</p>
+        <p v-if="!rsvp_finished"><strong>Please go through the steps below to send us your RSVP details</strong></p>
         <form class="form-steps" v-if="!rsvp_finished">
             <div class="step step-1">
                 <h3 class="title is-3">Step One - When are you invited for?</h3>
@@ -18,7 +19,6 @@
                     <input v-model="accepts_declines" type="radio" value="declines" required name="accept-decline"/>
                     Declines with regrets
                 </label>
-                {{accepts_declines}}
             </div>
             <div class="step step-3-decline" v-if="accepts_declines === 'declines'">
                 <h4 class="title is-4">Please enter your name and then click send to let us know</h4>
@@ -117,7 +117,7 @@
                             <div class="course main">
                                 <h4 class="title is-4">Main</h4>
                                 <label>
-                                    <input v-model="rsvp.guests.two.dessert"  type="radio" value="A" required name="main-2"/>
+                                    <input v-model="rsvp.guests.two.main"  type="radio" value="A" required name="main-2"/>
                                     A
                                 </label>
                                 <label>
@@ -243,11 +243,12 @@
                 </div>
             </div>
         </form>
-        <p v-if="rsvp_finished">Thank you for telling us you can't attend!</p>
+        <p v-if="rsvp_finished">Thank you for filling out the form! For any questions or changes please contact us on phone or social media.</p>
     </section>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     name: 'RSVP',
     data() {
@@ -307,10 +308,61 @@ export default {
             this.steps.one = true;
         },
         decline() {
+            const declined = {
+                accepts_declines: this.accepts_declines,
+                type: this.rsvp.type,
+                name: this.decline_name,
+            }
+            var data = JSON.stringify(declined);
+
+            var config = {
+            method: 'post',
+            url: 'https://api.codehubble.com/api/forms/rspv',
+            headers: { 
+                'Content-Type': 'application/json'
+            },
+            data : data
+            };
+
+            axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+
             this.rsvp_finished = true;
         },
         send() {
-            console.log(this.rsvp)
+            const form = {
+                accepts_declines: this.accepts_declines,
+                rsvp: this.rsvp,
+                song_request: this.song_request
+
+            }
+            var data = JSON.stringify(form);
+
+            var config = {
+            method: 'post',
+            url: 'https://api.codehubble.com/api/forms/rspv',
+            headers: { 
+                'Content-Type': 'application/json'
+            },
+            data : data
+            };
+
+            axios(config)
+            .then(function (response) {
+                console.log(response.data);
+                // if(response.data.status === 'success') {
+                //     this.rsvp_finished = true;
+                // }
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+            this.rsvp_finished = true;
         }
     }
 }
