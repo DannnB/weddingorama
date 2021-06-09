@@ -1,13 +1,15 @@
 <template>
   <div class="home">
-    <Header />
+    <h1>Annise & Daniel's Wedding!</h1>
+    <!-- <h2>Please come back on or after this date to fill in the RSPV form.</h2> -->
+    <!-- <Header /> -->
     <!-- <SMS /> -->
-    <!-- <RSVP /> -->
-    <Location />
-    <Schedule />
-    <Gifts />
-    <Party />
-    <QnA />
+    <RSVP />
+    <!-- <Location /> -->
+    <!-- <Schedule /> -->
+    <!-- <Gifts /> -->
+    <!-- <Party /> -->
+    <!-- <QnA /> -->
   </div>
 </template>
 
@@ -39,7 +41,7 @@ export default {
 
 <style lang="scss">
 body {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 section {

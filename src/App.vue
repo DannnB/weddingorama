@@ -8,14 +8,25 @@
 </template>
 
 <style lang="scss">
+$purple: #6A4964;
 #app {
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #454545;
+  font-size: 16px
 }
 
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 2rem;
+}
 h1, h2, h3, h4, p {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
@@ -23,6 +34,16 @@ h1, h2, h3, h4, p {
 
 h1, h2, h3, h4 {
   margin: 2px 0;
+}
+
+.title {
+  margin: 10px 0;
+  &.is-3 {
+    font-size: 1.4rem;
+  }
+  &.is-4 {
+    font-size: 1.15rem;
+  }
 }
 #nav {
   padding: 30px;
@@ -34,6 +55,33 @@ h1, h2, h3, h4 {
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+}
+
+button {
+  &.btn {
+    width: 45%;
+    border-radius: 0;
+    border: 1px solid $purple;
+    height: 44px;
+    font-size: 1.2rem;
+    background: transparent;
+    color: $purple;
+    cursor: pointer;
+    margin-top: 16px;
+    &.active {
+      background: $purple;
+      color: white;
+    }
+    &:nth-child(2) {
+      // margin-left: 10px;
+    }
+  }
+  &.btn-primary {
+    background: $purple;
+    color: white;
+  }
+  &.btn-seconday {
   }
 }
 </style>
