@@ -408,6 +408,8 @@ export default {
             top: -2px;
             box-sizing: border-box;
             padding-left: 10px;
+            font-size: 1.2rem;
+            font-weight: 300;
             &.is-numbered {
                 height: 44px;
                 width: 88%;
