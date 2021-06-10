@@ -1,6 +1,6 @@
 <template>
-    <section class="rsvp">
-        <h2>Online RSPV</h2>
+    <section class="rsvp container">
+        <h2>Online RSVP</h2>
         <p>More infomation will coming soon, including a gift list and schedule!</p>
         <p v-if="!rsvp_finished"><strong>Please go through the steps below to send us your RSVP details</strong></p>
         <form class="form-steps" v-if="!rsvp_finished">
@@ -51,14 +51,14 @@
                     <input v-model="song_request" type="text"/>
                 </label>
             </div>
-            <div class="step step-4" v-if="rsvp.guests.names.one">
+            <div class="step step-4" v-if="rsvp.guests.names.one && accepts_declines === 'accepts'">
                 <h3 class="title is-3">Step Four - Food Menu</h3>
                 <h4 class="title is-4">Please see the menu supplied. Each box is numbered in relation to your guest names you filled out.</h4>
                 <!-- TODO: output gues names with numbers -->
                 <div class="guest-menu">
                     <div class="guest guest-1" v-if="rsvp.guests.names.one">
                         <h3 class="title is-3">Guest 1: {{rsvp.guests.names.one}}</h3>
-                        <div class="courses">
+                        <div class="courses" v-if="rsvp.type != 'evening'">
                             <div class="course starter">
                                 <h4 class="title is-4">Starter</h4>
                                 <label>
@@ -102,7 +102,7 @@
                     </div>
                     <div class="guest guest-2" v-if="rsvp.guests.names.two">
                         <h3 class="title is-3">Guest 2: {{rsvp.guests.names.two}}</h3>
-                        <div class="courses">
+                        <div class="courses" v-if="rsvp.type != 'evening'">
                             <div class="course starter">
                                 <h4 class="title is-4">Starter</h4>
                                 <label>
@@ -146,7 +146,7 @@
                     </div>
                     <div class="guest guest-3" v-if="rsvp.guests.names.three">
                         <h3 class="title is-3">Guest 3: {{rsvp.guests.names.three}}</h3>
-                        <div class="courses">
+                        <div class="courses" v-if="rsvp.type != 'evening'">
                             <div class="course starter">
                                 <h4 class="title is-4">Starter</h4>
                                 <label>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="guest guest-4" v-if="rsvp.guests.names.four">
                         <h3 class="title is-3">Guest 4: {{rsvp.guests.names.four}}</h3>
-                        <div class="courses">
+                        <div class="courses" v-if="rsvp.type != 'evening'">
                             <div class="course starter">
                                 <h4 class="title is-4">Starter</h4>
                                 <label>
@@ -369,6 +369,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .container {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+    }
     .person {
         margin: 10px 0;
         padding: 20px;
