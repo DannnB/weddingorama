@@ -18,18 +18,21 @@ $purple: #6A4964;
   font-size: 16px
 }
 
-h1 {
-  font-size: 2rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 2rem;
-}
+
 h1, h2, h3, h4, p {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
 }
 
 h1, h2, h3, h4 {
@@ -60,7 +63,7 @@ h1, h2, h3, h4 {
 
 button {
   &.btn {
-    width: 45%;
+    width: 65%;
     border-radius: 0;
     border: 1px solid $purple;
     height: 44px;
@@ -82,6 +85,10 @@ button {
     color: white;
   }
   &.btn-seconday {
+  }
+  &.disabled {
+    cursor: not-allowed;
+    opacity: .4;
   }
 }
 </style>

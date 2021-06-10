@@ -1,6 +1,6 @@
 <template>
     <section class="rsvp container">
-        <h2>Online RSVP</h2>
+        <h1>Online RSVP</h1>
         <p>More infomation will coming soon, including a gift list and schedule!</p>
         <p v-if="!rsvp_finished"><strong>Please go through the steps below to send us your RSVP details</strong></p>
         <form class="form-steps" v-if="!rsvp_finished">
@@ -235,11 +235,13 @@
                 </div>
 
                 <div class="submit">
-                    <p>If you want a copy of your RSVP please enter your email below.</p>
+                    <p>Please enter your email below. This is for a copy of the RSVP. It will not be used for anything else.</p>
                     <label>
-                        <input v-model="rsvp.contact_email" type="email" placeholder="email..."/>
+                        <input v-model="rsvp.contact_email" type="email" placeholder="email..." required/>
                     </label>
-                    <button class="btn btn-primary" @click.prevent="send">Send your RSVP</button>
+                    <p v-if="!rsvp.contact_email">You must enter your email to send your RSVP response.</p>
+                    <button v-if="rsvp.contact_email" class="btn btn-primary" @click.prevent="send">Send your RSVP</button>
+                    <button v-if="!rsvp.contact_email" class="btn btn-primary disabled" @click.prevent>Send your RSVP</button>
                 </div>
             </div>
         </form>
@@ -369,11 +371,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .container {
-        max-width: 500px;
-        width: 100%;
-        margin: 0 auto;
-    }
     .person {
         margin: 10px 0;
         padding: 20px;

@@ -1,11 +1,9 @@
 <template>
   <div class="home">
-    <h1>Annise & Daniel's Wedding!</h1>
-    <!-- <h2>Please come back on or after this date to fill in the RSPV form.</h2> -->
-    <!-- <Header /> -->
+    <Header />
     <!-- <SMS /> -->
     <RSVP />
-    <!-- <Location /> -->
+    <Location />
     <!-- <Schedule /> -->
     <!-- <Gifts /> -->
     <!-- <Party /> -->
@@ -43,6 +41,7 @@ export default {
 body {
   font-size: 16px;
   margin: 0;
+  padding: 0 10px;
 }
 section {
   padding: 30px 10px;
@@ -50,5 +49,10 @@ section {
 ul {
   list-style: none;
   padding: 0
+}
+.container {
+  max-width: 500px;
+  // width: 100%;
+  margin: 0 auto;
 }
 </style>
