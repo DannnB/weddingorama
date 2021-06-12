@@ -4,7 +4,7 @@
     <!-- <SMS /> -->
     <RSVP />
     <Location />
-    <!-- <Schedule /> -->
+    <Schedule />
     <!-- <Gifts /> -->
     <!-- <Party /> -->
     <!-- <QnA /> -->

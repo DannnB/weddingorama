@@ -1,18 +1,18 @@
 <template>
-    <section class="schedule">
+    <section class="schedule container">
         <h2>Schedule</h2>
         <ul>
-            <li>11.30am - arrive and be seated</li>
-            <li>12.00pm - ceremony</li>
-            <li>12.30pm - drinks and photos</li>
-            <li>14.15pm - guests seated</li>
-            <li>14.30pm - food service</li>
-            <li>16.30pm - speaches</li>
-            <li>5.00pm - room turnaround - guests mingle, drink, check in hotel etc.</li>
-            <strong>Evening guests arrive</strong>
-            <li>7.00pm - evening reception to begin and first dance</li>
-            <li>8.15pm - cut the cake</li>
-            <li>9.00pm - evening buffet and all night party</li>
+            <li>11.30am - Arrival and to be seated</li>
+            <li>12.00am - Ceremony</li>
+            <li>12.30pm - Arrival Drinks & Photos</li>
+            <li>2.15pm - Guests to be seated</li>
+            <li>2.30pm - Arrival Drinks & Photos</li>
+            <li>4.30pm - Speaches</li>
+            <li>5.00pm - Room turn around, guests to relax, drink, socialise and check into hotels etc.</li>
+            <li>7.00pm - Evening Guests Arrive - Reception</li>
+            <li>7.15pm - First Dance</li>
+            <li>8.15pm - Cut the cake</li>
+            <li>9.00pm Evening buffet - Including burgers, hotdogs and snack food (Vegie/Vegan available)</li>
         </ul>
     </section>
 </template>
