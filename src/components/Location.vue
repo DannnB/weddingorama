@@ -1,6 +1,10 @@
 <template>
     <section class="location container">
         <h1>Infomation</h1>
+        <h2>Gifting</h2>
+        <p>We are very grateful for gifts, but it is not required. Although, if you would like to get us something we have put a list together to help.</p>
+        <button class="btn"><a href="https://www.marriagegiftlist.com/EK6284?fbclid=IwAR1zAeEkor9FnGkNCKFCTb8bnBXrC23-c6Z_H35RlLHkjRmZFP_4yvovuCs" target="_blank">Online Shop Gift List</a></button>
+        <button class="btn"><a href="https://www.amazon.co.uk/hz/wishlist/ls/18ANE27E2C3HA?ref_=wl_share" target="_blank">Amazon Gift List</a></button>
         <h2>Accommodation</h2>
         <article>
             <h3><a href="https://www.feathersledbury.co.uk/" target="_blank">The Feathers Hotel</a></h3>
