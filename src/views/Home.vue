@@ -7,7 +7,7 @@
     <Schedule />
     <!-- <Gifts /> -->
     <!-- <Party /> -->
-    <!-- <QnA /> -->
+    <QnA />
   </div>
 </template>
 
