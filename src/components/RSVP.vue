@@ -1,8 +1,7 @@
 <template>
     <section class="rsvp container">
         <h1>Online RSVP</h1>
-        <p>More infomation will coming soon, including a gift list and schedule!</p>
-        <p v-if="!rsvp_finished"><strong>Please go through the steps below to send us your RSVP details</strong></p>
+        <p v-if="!rsvp_finished"><strong>Please go through the steps below to send us your RSVP details</strong><br>Please send us a message on social media or mobile that you have submitted this form. This is to make sure we get your response!</p>
         <form class="form-steps" v-if="!rsvp_finished">
             <div class="step step-1">
                 <h3 class="title is-3">Step One - When are you invited for?</h3>
